@@ -3,7 +3,7 @@ const articleList = document.getElementById('article-list');
 const articleContainer = document.querySelector('.article-container');
 const loadMessage = document.getElementById('load-message');
 
-const BASE_URL = window.location.origin || 'http://localhost:3000';
+const BASE_URL = window.location.origin || 'https://scraper-site.onrender.com';
 
 fetchButton.addEventListener('click', () => {
     loadMessage.style.display = 'block';
