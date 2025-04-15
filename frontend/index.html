@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hacker News Web Scraper</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <ul class="socials">
+                    <li>
+                        <a href="">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="title-block">
+            <div class="container">
+                <h1>Hacker News Web Scraper 🐺</h1>
+            </div>
+        </div>
+
+        <div class="container">
+            <p>Clicking the button below runs a function to scrape <a class="link" href="https://news.ycombinator.com/newest">Hacker News Newest</a> for the first 100 articles.</p>
+            <button id="fetch-button">Fetch Articles</button>
+            <p id="load-message">Loading articles...</p>
+            <div class="article-container">
+                <ul id="article-list"></ul>
+            </div>
+        </div>
+    </main>
+    
+    <script src="displayArticles.js"></script>
+</body>
+</html>
