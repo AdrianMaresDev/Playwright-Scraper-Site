@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 const PORT = process.env.PORT || 3000;
 const { sortHackerNewsArticles } = require('../index.js');
 
@@ -13,11 +14,15 @@ app.use(cors({
     origin: 'https://hackernewsscraper.netlify.app/'
 }));
 
-try {
-    execSync('npx playwright install', { stdio: 'inherit' });
-} catch (error) {
-    console.error(error);
-}
+const browserDirectory = path.join(__dirname, 'node_modules', '.playwright');
+
+if (!fs.existsSync(browserDirectory)) {
+    try {
+        execSync('npx playwright install', { stdio: 'inherit' });
+    } catch (error) {
+        console.error(error);
+    }
+};
 
 app.get('/articles', async (_, res) => {
     try {
