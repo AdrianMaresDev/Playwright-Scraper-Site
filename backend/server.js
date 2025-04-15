@@ -2,11 +2,13 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const path = require('path');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const { sortHackerNewsArticles } = require('../index.js');
 
 app.use(express.static(path.join(__dirname, '../frontend')));
-app.use(cors());
+app.use(cors({
+    origin: 'https://hackernewsscraper.netlify.app/'
+}));
 
 app.get('/articles', async (_, res) => {
     try {
