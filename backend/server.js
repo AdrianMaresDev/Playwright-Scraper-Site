@@ -1,3 +1,4 @@
+const { execSync } = require('child_process');
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -9,6 +10,12 @@ app.use(express.static(path.join(__dirname, '../frontend')));
 app.use(cors({
     origin: 'https://hackernewsscraper.netlify.app/'
 }));
+
+try {
+    execSync('npx playwright install', { stdio: 'inherit' });
+} catch (error) {
+    console.error(error);
+}
 
 app.get('/articles', async (_, res) => {
     try {
