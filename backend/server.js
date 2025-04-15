@@ -1,4 +1,4 @@
-const { execSync } = require('child_process');
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -7,15 +7,10 @@ const PORT = process.env.PORT || 3000;
 const { sortHackerNewsArticles } = require('../index.js');
 
 app.use(express.static(path.join(__dirname, '../frontend')));
+app.use('/test-data', express.static(path.join(__dirname, '../test-data')));
 app.use(cors({
     origin: 'https://hackernewsscraper.netlify.app/'
 }));
-
-try {
-    execSync('npx playwright install', { stdio: 'inherit' });
-} catch (error) {
-    console.error(error);
-}
 
 app.get('/articles', async (_, res) => {
     try {

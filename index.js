@@ -100,7 +100,9 @@ const sortArticles = (articles) => {
 async function sortHackerNewsArticles() {
 
     //Launch browser
-    const browser = await chromium.launch({ headless: true });
+    const browser = await chromium.launch({
+        headless: process.env.NODE_ENV === 'production'
+    });
     const context = await browser.newContext();
     const page = await context.newPage();
 

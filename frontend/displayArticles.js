@@ -2,6 +2,7 @@ const fetchButton = document.getElementById('fetch-button');
 const articleList = document.getElementById('article-list');
 const articleContainer = document.querySelector('.article-container');
 const loadMessage = document.getElementById('load-message');
+const downloadButtons = document.querySelector('.download-buttons');
 
 const BASE_URL = window.location.origin || 'https://scraper-site.onrender.com';
 
@@ -35,6 +36,8 @@ async function fetchArticles() {
 
         loadMessage.style.display = 'none';
         articleContainer.style.display = 'block';
+        downloadButtons.style.display = 'flex';
+
     } catch (error) {
         console.error('Could not fetch articles.', error);
         loadMessage.textContent = 'Could not load articles. Please try again.';

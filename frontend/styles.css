@@ -12,7 +12,7 @@
     --light-blue: #3D3DF5;
     --dark-blue: #0C0C29;
     --article-bg: #28283A;
-    --accent-green: #00FF71;
+    --accent-green: #0DF2CC;
     --light-purple: #F4BDEC;
 
 }
@@ -40,7 +40,7 @@ a {
 }
 
 a:hover {
-    color: var(--accent-green);
+    color: var(--light-purple);
 }
 
 ul {
@@ -71,12 +71,16 @@ ul {
     text-underline-offset: 0.2rem;
 }
 
+.link:hover {
+    color: var(--accent-green);
+}
+
 button {
     font-family: 'Poppins', 'sans-serif';
     padding: 0.4rem 0.8rem;
+    margin-top: 1rem;
     cursor: pointer;
     font-size: 1rem;
-    margin: 1.5rem 0;
     transition: 0.3s ease;
     border: var(--dark-blue);
     border-radius: 0.5rem;
@@ -86,9 +90,16 @@ button:hover {
     background-color: var(--accent-green);
 }
 
+.download-buttons {
+    display: none;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
 #load-message {
     display: none;
-    margin-bottom: 1.5rem;
+    margin: 1rem 0;
 }
 
 /*Articles*/
