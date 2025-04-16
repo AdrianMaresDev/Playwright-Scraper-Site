@@ -2,7 +2,7 @@
 
 Thank you so much for taking the time to look at my application! I had so much fun with this assignment and I'd love to know what you think.
 
-My name is Kayla (though I go by Adrian), and I'm a fullstack developer with a background in customer service and a strong desire to continuously learn and expand my skillset. I've grown to love the process of software development, from planning all the way to building and problem-solving.
+My name is Kayla Maresca (though I go by Adrian), and I'm a fullstack developer with a background in customer service and a strong desire to continuously learn and expand my skillset. I've grown to love the process of software development, from planning all the way to building and problem-solving.
 
 I've been working in the service industry and coding for a while now, and I've since discovered that programming is an immense passion of mine. I'm super excited about the opportunity to use all of the skills I've learned and apply them at QA Wolf to help the company thrive.
 

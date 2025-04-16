@@ -9,11 +9,10 @@ const BASE_URL = window.location.origin || 'https://scraper-site.onrender.com';
 
 fetchButton.addEventListener('click', () => {
     loadMessage.style.display = 'block';
-    fetchArticles();
-    fetchButton.textContent = 'Refresh Articles';
+    displayArticles();
 });
 
-async function fetchArticles() {
+async function displayArticles() {
     try {
         const res = await fetch(`${BASE_URL}/articles`);
         const articles = await res.json();
@@ -38,6 +37,7 @@ async function fetchArticles() {
         loadMessage.style.display = 'none';
         articleContainer.style.display = 'block';
         downloadButtons.style.display = 'flex';
+        fetchButton.textContent = 'Refresh Articles';
 
     } catch (error) {
         console.error('Could not fetch articles.', error);

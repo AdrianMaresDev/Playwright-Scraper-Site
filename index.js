@@ -131,6 +131,7 @@ async function sortHackerNewsArticles() {
         const isSorted = sortArticles(articles);
         if (!isSorted) {
             throw new Error('Articles are not sorted from newest to oldest.');
+
         } else {
             generateJson(articles);
             generateCsv(articles);
