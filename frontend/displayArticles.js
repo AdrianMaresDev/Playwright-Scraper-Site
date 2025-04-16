@@ -4,6 +4,7 @@ const articleContainer = document.querySelector('.article-container');
 const loadMessage = document.getElementById('load-message');
 const downloadButtons = document.querySelector('.download-buttons');
 
+//Use either a local port or deployed site from Render
 const BASE_URL = window.location.origin || 'https://scraper-site.onrender.com';
 
 fetchButton.addEventListener('click', () => {

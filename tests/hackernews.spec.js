@@ -35,6 +35,7 @@ test('Verify all articles have valid fields', async () => {
         expect(article).toHaveProperty('unixDate');
         expect(article).toHaveProperty('poster');
         expect(article).toHaveProperty('index');
+        expect(article).toHaveProperty('url');
     });
 });
 

@@ -9,11 +9,15 @@ const PORT = process.env.PORT || 3000;
 const { sortHackerNewsArticles } = require('../index.js');
 
 app.use(express.static(path.join(__dirname, '../frontend')));
+
+//Get files from the test-data folder when the user downloads JSON or CSV
 app.use('/test-data', express.static(path.join(__dirname, '../test-data')));
+
 app.use(cors({
     origin: 'https://hackernewsscraper.netlify.app/'
 }));
 
+//Make sure Playwright browsers are installed before running the page on Render
 const browserDirectory = path.join(__dirname, 'node_modules', '.playwright');
 
 if (!fs.existsSync(browserDirectory)) {

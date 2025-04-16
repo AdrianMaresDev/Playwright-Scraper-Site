@@ -1,55 +1,39 @@
 # 🐺 QA Wolf Take Home Assignment
 
-Welcome to the QA Wolf take home assignment for our [QA Engineer](https://www.task-wolf.com/apply-qae) role! We appreciate your interest and look forward to seeing what you come up with.
+Thank you so much for taking the time to look at my application! I had so much fun with this assignment and I'd love to know what you think.
 
-## Instructions
+My name is Kayla (though I go by Adrian), and I'm a fullstack developer with a background in customer service and a strong desire to continuously learn and expand my skillset. I've grown to love the process of software development, from planning all the way to building and problem-solving.
 
-This assignment has two questions as outlined below. When you are done, upload your assignment to our [application page](https://www.task-wolf.com/apply-qae):
+I've been working in the service industry and coding for a while now, and I've since discovered that programming is an immense passion of mine. I'm super excited about the opportunity to use all of the skills I've learned and apply them at QA Wolf to help the company thrive.
 
+## Background
 
-### Question 1
+While my professional background has been predominantly within the service industry, most recently as a server and as a barista, the skills I've learned are still crucial to understanding the customer's needs and putting those first, regardless of the environment I'm working in. 
 
-In this assignment, you will create a script on [Hacker News](https://news.ycombinator.com/) using JavaScript and Microsoft's [Playwright](https://playwright.dev/) framework. 
+My experience has taught me a lot about communication, task prioritization, and, what I believe is my biggest strength, listening to feedback and using it to better my work process.
 
-1. Install node modules by running `npm i`.
+I don't think feedback should be viewed as personal criticism. Instead, I see it as an invaluable tool for growth. Even in the service industry, learning this skill was incredibly important in order to actively listen to my teammates and customers and know how to act accordingly. 
 
-2. Edit the `index.js` file in this project to go to [Hacker News/newest](https://news.ycombinator.com/newest) and validate that EXACTLY the first 100 articles are sorted from newest to oldest. You can run your script with the `node index.js` command.
+This mindset has transferred directly into how I work as a developer. I love hearing feedback, even if it's uncomfortable, because that means I can learn how to improve my code and better identify (and fix) my flaws. **I appreciate that kind of openness, which is why QA Wolf seems like such a natural fit.**
 
-Note that you are welcome to update Playwright or install other packages as you see fit, however you must utilize Playwright in this assignment.
+### Why QA Wolf?
 
-### Question 2
+What draws me to QA Wolf the most is the company's strong emphasis on teamwork, open communication, and full ownership. I'm excited about the chance to contribute to something meaningful, as quality assurance is a critical and often overlooked issue every development team faces. **I think QA Wolf is a highly innovative and action-driven company that sees this issue and is striving to provide an impactful solution, and fast.**
 
-Why do you want to work at QA Wolf? Please record a short, ~2 min video using [Loom](https://www.loom.com/) that includes:
+The prospect of working alongside teammates who care so deeply about their work and each other makes QA Wolf my dream job, to put things lightly. I'm fully ready to own my role and contribute in every way I can. At the same time, I'm excited to continue learning and growing so that I can help propel my teammates' success alongside mine and push the company's goals forward. QA Wolf seems like an incredible place to foster this growth and deliver an incredible product as a result.
 
-1. Your answer 
+### The Project
 
-2. A walk-through demonstration of your code, showing a successful execution
+I had a lot of fun with this take-home assignment and I wanted to do everything I could to make myself stand out. Rather than just building a web scraping function, I decided to take it a step further and build a full web app. The backend is deployed via Render and the frontend is live on Netlify.
 
-The answer and walkthrough should be combined into *one* video, and must be recorded using Loom as the submission page only accepts Loom links.
+The site uses Express and has an API endpoint that fetches and returns new article data (while ensuring they are sorted).
 
-## Frequently Asked Questions
+In the development environment, running `node index.js` will scrape Hacker News Newest and generate a `test-data` folder containing a JSON and CSV file. These files are overwritten every time the command is run so the articles remain up-to-date on the site. If the articles are not sorted, the script will fail and return an empty array instead.
 
-### What is your hiring process? When will I hear about next steps?
+👉 **You can view the live page here!** (https://scraper-site.onrender.com/) It displays the latest articles and gives you the option to download the JSON and CSV files.
 
-This take home assignment is the first step in our hiring process, followed by a final round interview if it goes well. **We review every take home assignment submission and promise to get back to you either way within two weeks (usually sooner).** The only caveat is if we are out of the office, in which case we will get back to you when we return. If it has been more than two weeks and you have not heard from us, please do follow up.
+I've also included two test files, one for testing the sorting function and another for testing the web app.
 
-The final round interview is a 2-hour technical work session that reflects what it is like to work here. We provide a $150 stipend for your time for the final round interview regardless of how it goes. After that, there may be a short chat with our director about your experience and the role.
+Thank you again for your time and consideration. I'd love the opportunity to join your team and hit the ground running.
 
-Our hiring process is rolling where we review candidates until we have filled our openings. If there are no openings left, we will keep your contact information on file and reach out when we are hiring again.
-
-### Having trouble uploading your assignment?
-Be sure to delete your `node_modules` file, then zip your assignment folder prior to upload. 
-
-### How do you decide who to hire?
-
-We evaluate candidates based on three criteria:
-
-- Technical ability (as demonstrated in the take home and final round)
-- Customer service orientation (as this role is customer facing)
-- Alignment with our mission and values (captured [here](https://qawolf.notion.site/Mission-and-Values-859c7d0411ba41349e1b318f4e7abc8f))
-
-This means whether we hire you is based on how you do during our interview process, not on your previous experience (or lack thereof). Note that you will also need to pass a background check to work here as our customers require this.
-
-### How can I help my application stand out?
-
-We've found that our best hires have been the most enthusiastic throughout our process. If you are very excited about working here, please feel free to go above and beyond on this assignment.
+Looking forward to hearing from you!

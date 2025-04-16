@@ -20,11 +20,6 @@ const loadPage = async (page) => {
     }
 };
 
-/*const getTitle = async (article) => {
-    const title =  (await article.locator('span.titleline > a')?.innerText()).trim();
-    return title;
-};*/
-
 const getTitle = async (article) => {
     const titleElement = article.locator('span.titleline > a');
 
@@ -101,6 +96,8 @@ async function sortHackerNewsArticles() {
 
     //Launch browser
     const browser = await chromium.launch({
+
+        //Only run headed mode in development
         headless: process.env.NODE_ENV === 'production'
     });
     const context = await browser.newContext();
@@ -135,15 +132,14 @@ async function sortHackerNewsArticles() {
         if (!isSorted) {
             throw new Error('Articles are not sorted from newest to oldest.');
         } else {
+            generateJson(articles);
+            generateCsv(articles);
             console.log('Articles are sorted from newest to oldest.');
         }
 
-        generateJson(articles);
-        generateCsv(articles);
-
     } catch (error) {
         console.error(error);
-        return [];
+        articles = [];
 
     } finally {
         await browser.close();
