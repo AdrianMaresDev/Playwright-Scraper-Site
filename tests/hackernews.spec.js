@@ -24,7 +24,7 @@ test('Verify the articles are sorted from newest to oldest', async () => {
 });
 
 test('Verify all articles are unique', async () => {
-    const uniqueArticles = new Set(articles.map(article => `${article.title}_${article.timestamp}`));
+    const uniqueArticles = new Set(articles.map(article => `${article.url}_${article.timestamp}`));
     expect(uniqueArticles.size).toBe(articles.length);
 });
 
