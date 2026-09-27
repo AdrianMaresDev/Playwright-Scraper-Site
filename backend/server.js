@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, '../frontend')));
 app.use('/test-data', express.static(path.join(__dirname, '../test-data')));
 
 app.use(cors({
-    origin: 'https://hackernewsscraper.netlify.app/'
+    origin: 'https://hackernewsscraper.netlify.app'
 }));
 
 //Make sure Playwright browsers are installed before running the page on Render
@@ -22,7 +22,7 @@ const browserDirectory = path.join(__dirname, 'node_modules', '.playwright');
 
 if (!fs.existsSync(browserDirectory)) {
     try {
-        execSync('npx playwright install', { stdio: 'inherit' });
+        execSync(`node "${path.join(__dirname, '../node_modules/playwright/cli.js')}" install chromium`, { stdio: 'inherit' });
     } catch (error) {
         console.error(error);
     }

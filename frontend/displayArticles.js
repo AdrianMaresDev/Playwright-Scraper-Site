@@ -4,8 +4,14 @@ const articleContainer = document.querySelector('.article-container');
 const loadMessage = document.getElementById('load-message');
 const downloadButtons = document.querySelector('.download-buttons');
 
-//Use either a local port or deployed site from Render
-const BASE_URL = window.location.origin || 'https://scraper-site.onrender.com';
+//Netlify only hosts the frontend, so point it at the Render backend. Otherwise use the local or Render origin
+const BASE_URL = window.location.hostname.endsWith('netlify.app')
+    ? 'https://scraper-site.onrender.com'
+    : window.location.origin;
+
+downloadButtons.querySelectorAll('a').forEach(link => {
+    link.href = `${BASE_URL}${link.getAttribute('href')}`;
+});
 
 fetchButton.addEventListener('click', () => {
     loadMessage.style.display = 'block';

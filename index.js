@@ -38,11 +38,13 @@ const getTimestamp = async (article, index) => {
     const timestampElement = await article.evaluateHandle(el => el.nextElementSibling);
     const timestamp = await timestampElement.evaluate(el => el.querySelector('span.age').getAttribute('title'));
 
-    if (!/\d+/.test(timestamp)) {
+    //Hacker News timestamps are UTC ISO strings without a timezone marker
+    const unixDate = Math.floor(Date.parse(timestamp.split(' ')[0] + 'Z') / 1000);
+
+    if (Number.isNaN(unixDate)) {
         throw new Error(`Invalid date format: ${timestamp} at index ${index}`);
     }
 
-    const unixDate = parseInt(timestamp.split(' ')[1], 10);
     const isoDate = new Date(unixDate * 1000).toISOString();
 
     return { unixDate, isoDate };
